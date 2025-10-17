@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../greencart_assets/assets";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const navigate = useNavigate();
   return (
     <div className="navbar">
       <div className="navbar-content">
@@ -29,7 +30,7 @@ const Navbar = () => {
             </datalist>
           </div>
           <button className="cart-btn">
-            <img src={assets.nav_cart_icon} alt="" />
+            <img src={assets.nav_cart_icon} onClick={()=>navigate('/cart')} alt="" />
             <div className="dot"></div>
           </button>
           <button className="login-btn">Log In</button>
