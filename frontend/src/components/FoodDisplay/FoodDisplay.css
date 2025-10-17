@@ -1,17 +1,35 @@
-.food-display{
-    margin-top: 100px;
+.food-display {
+    width: 90vw;
+    margin: 60px auto;
+    padding: 20px;
 }
 
-.food-display h1{
-    margin-bottom: 30px;
-    font-size: 40px;
-    font-weight: 600;
-    font-family: 'poppins',sans-serif;
+.food-display h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.food-list{
+.food-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, max(20vw, 300px));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
-    padding: 0 30px;
+    padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .food-display {
+        margin: 40px auto;
+    }
+
+    .food-display h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .food-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
 }

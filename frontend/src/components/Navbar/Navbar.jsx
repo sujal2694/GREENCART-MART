@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../greencart_assets/assets";
 import {Link, useNavigate} from 'react-router-dom'
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
   const navigate = useNavigate();
+  const {cartItems} = useContext(StoreContext)
   return (
     <div className="navbar">
       <div className="navbar-content">
@@ -13,7 +15,7 @@ const Navbar = () => {
         <div className="navbar-list">
           <ul>
             <Link to='/'><li onClick={()=>setMenu("home")} className={menu==='home'?"active":""}>Home</li></Link>
-            <a href='#products'><li onClick={()=>setMenu("products")} className={menu==="products"?"active":""}>All Products</li></a>
+            <a href='#products' onClick={()=>navigate('/')}><li onClick={()=>setMenu("products")} className={menu==="products"?"active":""}>All Products</li></a>
             <Link to='/contact'><li onClick={()=>setMenu("contact")} className={menu==='contact'?"active":""}>Contact</li></Link>
           </ul>
         </div>
@@ -31,7 +33,7 @@ const Navbar = () => {
           </div>
           <button className="cart-btn">
             <img src={assets.nav_cart_icon} onClick={()=>navigate('/cart')} alt="" />
-            <div className="dot"></div>
+            <div className={cartItems.length>0?"dot":""}></div>
           </button>
           <button className="login-btn">Log In</button>
         </div>

@@ -1,4 +1,5 @@
-.footer{
+/* Main footer container */
+.footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,43 +7,58 @@
     padding: 80px 10vw;
 }
 
-.footer .footer-text{
+/* Footer logo and description section */
+.footer .footer-text {
     width: 30%;
 }
 
-.footer .footer-text img{
+.footer .footer-text img {
     width: 200px;
 }
 
-.footer .footer-text p{
+.footer .footer-text p {
     color: #888;
 }
 
-.footer-links{
+/* Footer links section */
+.footer-links {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.footer-links .links p{
+.footer-links .links p {
     font-size: 32px;
     font-weight: 500;
     color: #333;
 }
 
-.footer-links .links ul{
+.footer-links .links ul {
     list-style: none;
     padding: 10px 20px;
     color: #888;
 }
 
-.footer-links .links ul li{
+.footer-links .links ul li {
     margin-top: 8px;
     font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.copyright{
+.footer-links .links ul li:hover {
+    color: #4CAF50;
+}
+
+/* Social media icons */
+.footer-links .links ul li i {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Copyright section */
+.copyright {
     text-align: center;
     font-size: 14px;
     font-weight: 500;
@@ -51,8 +67,39 @@
     background-color: #aaf7c454;
 }
 
-div hr{
+/* Horizontal divider */
+div hr {
     height: 1px;
     border: none;
     background-color: #888;
+    margin: 0;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        padding: 40px 5vw;
+        gap: 30px;
+    }
+
+    .footer .footer-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links .links {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-links .links p {
+        font-size: 24px;
+    }
 }

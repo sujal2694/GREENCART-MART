@@ -10,10 +10,12 @@ const Category = () => {
       <div className="category-boxes">
         {categories.map((item,index)=>{
           return(
-            <Link to={item.path}><div style={{backgroundColor: item.bgColor}} className="box" key={index}>
-              <img src={item.image} alt="" />
-              <p>{item.text}</p>
-            </div></Link>
+            <Link to={item.path} key={index}>
+              <div style={{backgroundColor: item.bgColor}} className="box">
+                <img src={item.image} alt={item.text} />
+                <p>{item.text}</p>
+              </div>
+            </Link>
           )
         })}
       </div>
