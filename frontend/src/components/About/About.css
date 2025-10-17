@@ -1,0 +1,94 @@
+.about{
+    position: relative;
+    margin: 100px 0;
+}
+
+.about img{
+    width: 100%;
+}
+
+.about-text{
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    padding: 30px 15px;
+}
+
+.about-text h1{
+    font-size: 35px;
+    color: #10b333;
+    font-family: "Nunito", sans-serif;
+}
+
+.about-text p{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    margin-top: 10px;
+    padding-left: 0 10px;
+}
+
+.about-text p span{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    color: #4d4d4d;
+}
+
+.feedback{
+    width: 50vw;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feedback h1{
+    color: #3d3d3d;
+    font-size: 50px;
+    font-weight: 400;
+    font-family: "Nunito", sans-serif;
+}
+
+.feedback p{
+    font-size: 18px;
+    word-spacing: 1.2px;
+    letter-spacing: 0.5px;
+    font-family: "Nunito", sans-serif;
+    color: #6d6d6d;
+}
+
+.feedback .input-btn{
+    margin: 30px 0;
+    width: 400px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #6b6a6a;
+}
+
+.feedback .input-btn input{
+    height: 45px;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    font-family: "Nunito", sans-serif;
+    border-radius: 5px 0 0 5px;
+}
+
+.feedback .input-btn button{
+    width: 30%;
+    height: 45px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #21ee43;
+    font-family: "Nunito", sans-serif;
+    border-radius: 0 5px 5px 0;
+}

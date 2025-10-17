@@ -1,0 +1,17 @@
+.food-display{
+    margin-top: 100px;
+}
+
+.food-display h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'poppins',sans-serif;
+}
+
+.food-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, max(20vw, 300px));
+    gap: 30px;
+    padding: 0 30px;
+}
