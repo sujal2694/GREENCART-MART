@@ -6,12 +6,16 @@ import Footer from './components/Footer/Footer'
 import Cart from './pages/Cart/Cart'
 import Contact from './components/contact/Contact'
 import LoginPopUp from './components/LoginPopUp/LoginPopUp'
+import { useContext } from 'react'
+import { StoreContext } from './context/StoreContext'
+import Toaster from 'react-hot-toast'
 
 const App = () => {
-  const [token, setToken] = useState(false)
+  const { token } = useContext(StoreContext);
   return (
     <>
-      {token ? <LoginPopUp /> : <>
+      {token === "" ? <LoginPopUp /> : <>
+        <Toaster />
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

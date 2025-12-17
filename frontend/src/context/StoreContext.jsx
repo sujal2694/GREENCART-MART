@@ -1,11 +1,14 @@
 // ...existing code...
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [userInfo, setUserInfo] = useState(null);
+    const [token, setToken] = useState("");
+
+    const url = "http://localhost:5000"
 
     const addToCart = (item) => {
         setCartItems(prev => {
@@ -25,13 +28,25 @@ const StoreContextProvider = ({ children }) => {
 
     const clearCart = () => setCartItems([]);
 
+    const fetchUser = () => {
+        if (localStorage.getItem("token")) {
+            setToken(localStorage.getItem("token"));
+        }
+    }
+
+    useEffect(()=>{
+        fetchUser()
+    },[])
+
     const contextValue = {
         cartItems,
         addToCart,
         removeFromCart,
         clearCart,
         userInfo,
-        setUserInfo
+        setUserInfo,
+        token,
+        setToken,
     };
 
     return (
