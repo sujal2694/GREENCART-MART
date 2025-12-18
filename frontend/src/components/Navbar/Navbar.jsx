@@ -35,7 +35,7 @@ const Navbar = () => {
             <img src={assets.nav_cart_icon} onClick={()=>navigate('/cart')} alt="" />
             <div className={cartItems.length>0?"dot":""}></div>
           </button>
-          <button className="login-btn">Log In</button>
+          <Link to='/login'><button className="login-btn">Log In</button></Link>
         </div>
       </div>
     </div>

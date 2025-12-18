@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./FoodItem.css";
 import { assets } from "../../greencart_assets/assets";
 import { StoreContext } from "../../context/StoreContext";
+import toast from "react-hot-toast";
 
 const FoodItem = ({
   id,
@@ -25,6 +26,7 @@ const FoodItem = ({
       quantity: 1
     };
     addToCart(item);
+    toast.success("Item added in cart")
   };
 
   return (
@@ -47,8 +49,8 @@ const FoodItem = ({
           <p>(4)</p>
         </div>
         <p className="price">
-          <span className="original-price">${price}</span>
-          <span className="offer-price">${offerPrice}</span>
+          <span className="original-price">₹{price}</span>
+          <span className="offer-price">₹{offerPrice}</span>
         </p>
       </div>
       <button onClick={handleAddToCart} className="add-to-cart-btn">

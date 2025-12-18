@@ -1,26 +1,26 @@
-.about{
+.about {
     position: relative;
     margin: 100px 0;
 }
 
-.about img{
+.about img {
     width: 100%;
 }
 
-.about-text{
+.about-text {
     position: absolute;
     top: 15%;
     right: 8%;
     padding: 30px 15px;
 }
 
-.about-text h1{
+.about-text h1 {
     font-size: 35px;
     color: #10b333;
     font-family: "Nunito", sans-serif;
 }
 
-.about-text p{
+.about-text p {
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -31,14 +31,14 @@
     padding-left: 0 10px;
 }
 
-.about-text p span{
+.about-text p span {
     font-size: 16px;
     font-weight: 600;
     font-family: "Nunito", sans-serif;
     color: #4d4d4d;
 }
 
-.feedback{
+.feedback {
     width: 50vw;
     margin: 50px auto;
     display: flex;
@@ -46,14 +46,14 @@
     flex-direction: column;
 }
 
-.feedback h1{
+.feedback h1 {
     color: #3d3d3d;
     font-size: 50px;
     font-weight: 400;
     font-family: "Nunito", sans-serif;
 }
 
-.feedback p{
+.feedback p {
     font-size: 18px;
     word-spacing: 1.2px;
     letter-spacing: 0.5px;
@@ -117,6 +117,51 @@
 
     .feedback h1 {
         font-size: 24px;
+    }
+
+    .input-btn {
+        flex-direction: column;
+    }
+
+    .input-btn button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        margin: 40px auto;
+        gap: 30px;
+    }
+
+    .about-text {
+        top: 5%;
+        right: 8%;
+    }
+
+    .about-text h1 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .about-text span {
+        font-size: 14px;
+    }
+
+    .feedback {
+        padding: 30px 20px;
+    }
+
+    .feedback h1 {
+        font-size: 24px;
+    }
+
+    .feedback p{
+        font-size: 12px;
+        text-align: center;
     }
 
     .input-btn {

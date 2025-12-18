@@ -38,17 +38,22 @@
     list-style: none;
     padding: 10px 20px;
     color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .footer-links .links ul li {
     margin-top: 8px;
     font-size: 16px;
     cursor: pointer;
+    width: 300px;
     transition: color 0.3s ease;
 }
 
 .footer-links .links ul li:hover {
-    color: #4CAF50;
+    color: #32d138;
 }
 
 /* Social media icons */
@@ -86,6 +91,44 @@ div hr {
     .footer .footer-text {
         width: 100%;
         text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links .links {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-links .links p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        flex-direction: column;
+        padding: 40px 5vw;
+        gap: 30px;
+    }
+
+    .footer .footer-text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-text p {
+        font-size: 15px;
+        text-align: center;
+        width: 250px;
     }
 
     .footer-links {

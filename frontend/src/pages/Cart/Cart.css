@@ -1,9 +1,29 @@
 .cart-container {
     width: 90vw;
-    height: 60vh;
     margin: 0 auto;
     padding: 20px;
     margin-top: 120px;
+}
+
+.cart-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-head button{
+    border: none;
+    background: #5fc463;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cart-head button:hover{
+    background-color: #45a049;
 }
 
 .empty-cart {

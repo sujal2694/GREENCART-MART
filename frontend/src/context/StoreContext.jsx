@@ -1,12 +1,13 @@
 // ...existing code...
 import React, { createContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export const StoreContext = createContext();
 
 const StoreContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [userInfo, setUserInfo] = useState(null);
-    const [token, setToken] = useState("");
+    const [token, setToken] = useState(null);
 
     const url = "http://localhost:5000"
 
@@ -24,6 +25,7 @@ const StoreContextProvider = ({ children }) => {
 
     const removeFromCart = (id) => {
         setCartItems(prev => prev.filter(i => i.id !== id));
+        toast.success("Item removed successfulluy")
     };
 
     const clearCart = () => setCartItems([]);
