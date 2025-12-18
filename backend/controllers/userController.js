@@ -22,7 +22,7 @@ export const LoginUser = async (req, res) => {
         }
 
         const token = createToken(user._id);
-        res.json({ success: true, token });
+        res.json({ success: true, token, message:"Login successfull"});
     } catch (error) {
         console.log(error);
         res.status(500).json({ success: false, message: "Login failed" });
@@ -71,7 +71,7 @@ export const registerUser = async (req, res) => {
         });
         const user = await newUser.save();
         const token = createToken(user._id);
-        res.status(201).json({ success: true, message: "Registration successful", token });
+        res.status(201).json({ success: true, message: "Registration successfull", token });
     } catch (error) {
         console.log(error);
         res.status(500).json({ success: false, message: "Registration failed!" });
