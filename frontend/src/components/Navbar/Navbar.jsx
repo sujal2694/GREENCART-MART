@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { assets } from "../../greencart_assets/assets";
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from "../../context/StoreContext";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
@@ -11,6 +12,7 @@ const Navbar = () => {
   const logout = () => {
     localStorage.removeItem("token", token);
     setToken("");
+    toast.success("Log out successfully");
   }
   return (
     <div className="navbar">
