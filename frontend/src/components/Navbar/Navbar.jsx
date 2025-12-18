@@ -28,14 +28,6 @@ const Navbar = () => {
         <div className="navbar-right">
           <div className="navbar-search">
             <input type="text" placeholder="Search here" list="search-list" />
-            <datalist id="search-list">
-              <option value="Fruits"></option>
-              <option value="Vegitables"></option>
-              <option value="Cold Drinks"></option>
-              <option value="Instant Food"></option>
-              <option value="Cake & Bread"></option>
-              <option value="Milk Items"></option>
-            </datalist>
           </div>
           <button className="cart-btn">
             <img src={assets.nav_cart_icon} onClick={() => navigate('/cart')} alt="" />
