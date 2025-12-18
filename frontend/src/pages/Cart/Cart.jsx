@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { StoreContext } from '../../context/StoreContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = () => {
-    const { cartItems, removeFromCart, addToCart, token, url } = useContext(StoreContext);
+    const { cartItems, removeFromCart, addToCart, token, clearCart } = useContext(StoreContext);
+    const navigate = useNavigate();
 
     const calculateTotal = () => {
         return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -15,10 +16,14 @@ const Cart = () => {
         addToCart({ ...item, quantity: change });
     };
 
-    const userAuth = () => {
-        if (!token) {
-            let newUrl = url;
-            newUrl += "/checkout"
+    const userAuth = (e) => {
+        if (e && !token) {
+            e.preventDefault();
+            navigate('/login');
+        } else if (!e && !token) {
+            navigate('/login');
+        } else if (!e && token) {
+            navigate('/checkout');
         }
     }
 
@@ -35,7 +40,7 @@ const Cart = () => {
         <div className="cart-container">
             <div className='cart-head'>
                 <h1>Shopping Cart</h1>
-                <button>Clear cart</button>
+                <button onClick={clearCart}>Clear cart</button>
             </div>
             <div className="cart-items">
                 {cartItems.map((item) => (
@@ -66,7 +71,7 @@ const Cart = () => {
                 <div className="total">
                     <h3>Total: ₹{calculateTotal().toFixed(2)}</h3>
                 </div>
-                <Link to="/checkout" onClick={()=>userAuth} className="checkout-btn">
+                <Link to="/checkout" onClick={(e) => userAuth(e)} className="checkout-btn">
                     Proceed to Checkout
                 </Link>
             </div>

@@ -109,6 +109,51 @@
     background-color: #45a049;
 }
 
+.profile{
+    position: relative;
+    cursor: pointer;
+}
+
+.profile:hover .log-out-btn{
+    display: block;
+}
+
+.log-out-btn{
+    width: 130px;
+    background-color: #fff;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px #dbdbdb9c;
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+.log-out-btn:hover{
+    background-color: #b4b4b4;
+    color: white;
+}
+
+.log-out-btn:hover button{
+    color: white;
+}
+
+.log-out-btn i{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.log-out-btn button{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .navbar-list {
         display: none;

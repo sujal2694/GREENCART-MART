@@ -18,9 +18,7 @@ const App = () => {
 
   return (
     <>
-      {token 
-      ? <LoginPopUp /> 
-      : <>
+      {!token ? <LoginPopUp /> : <>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />

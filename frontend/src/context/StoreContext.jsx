@@ -25,7 +25,7 @@ const StoreContextProvider = ({ children }) => {
 
     const removeFromCart = (id) => {
         setCartItems(prev => prev.filter(i => i.id !== id));
-        toast.success("Item removed successfulluy")
+        toast.success("Item removed successfully")
     };
 
     const clearCart = () => setCartItems([]);
@@ -49,6 +49,7 @@ const StoreContextProvider = ({ children }) => {
         setUserInfo,
         token,
         setToken,
+        url,
     };
 
     return (
