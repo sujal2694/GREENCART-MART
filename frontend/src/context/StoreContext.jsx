@@ -9,7 +9,7 @@ const StoreContextProvider = ({ children }) => {
     const [userInfo, setUserInfo] = useState(null);
     const [token, setToken] = useState(null);
 
-    const url = "http://localhost:5000"
+    const url = "https://greencart-mart-backend.onrender.com"
 
     const addToCart = (item) => {
         setCartItems(prev => {
