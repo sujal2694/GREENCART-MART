@@ -12,9 +12,6 @@ import { Toaster } from 'react-hot-toast';
 
 const App = () => {
   const { token } = useContext(StoreContext);
-  useEffect(() => {
-    console.log(token);
-  }, [])
 
   return (
     <>
