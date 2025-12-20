@@ -1,174 +1,221 @@
 .about {
-    position: relative;
-    margin: 100px 0;
-}
-
-.about img {
     width: 100%;
+    margin: 100px auto;
+    background-image: url("../../greencart_assets/bottom_banner_image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 300px;
 }
 
 .about-text {
-    position: absolute;
-    top: 15%;
-    right: 8%;
-    padding: 30px 15px;
+    width: 90%;
+    margin: 30px auto;
+    justify-items: end;
 }
 
 .about-text h1 {
     font-size: 35px;
-    color: #10b333;
-    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+}
+
+.about-text .text{
+    width: 380px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
 }
 
 .about-text p {
     display: flex;
     align-items: start;
     flex-direction: column;
-    font-size: 28px;
+    gap: 2px;
+    font-size: 25px;
     font-weight: 600;
-    font-family: "Nunito", sans-serif;
-    margin-top: 10px;
-    padding-left: 0 10px;
+    margin-top: 8px;
+    font-family: "outfit", sans-serif;
 }
 
 .about-text p span {
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "Nunito", sans-serif;
-    color: #4d4d4d;
+    font-size: 18px;
+    font-weight: 500;
+    color: #666565;
 }
 
 .feedback {
-    width: 50vw;
-    margin: 50px auto;
+    width: 90%;
+    margin: 300px auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
 .feedback h1 {
-    color: #3d3d3d;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 400;
-    font-family: "Nunito", sans-serif;
+    font-family: 'poppins', sans-serif;
 }
 
 .feedback p {
-    font-size: 18px;
-    word-spacing: 1.2px;
-    letter-spacing: 0.5px;
-    font-family: "Nunito", sans-serif;
-    color: #6d6d6d;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "outfit", sans-serif;
 }
 
-.input-btn {
+.feedback .input-btn {
     display: flex;
-    gap: 10px;
+    align-items: center;
     justify-content: center;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 40px;
+    margin: 30px;
+    gap: 10px;
 }
 
 .input-btn input {
-    flex: 1;
-    padding: 12px 20px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
+    height: 40px;
+    width: 300px;
+    padding-left: 20px;
     font-size: 16px;
+    outline: 1px solid #8b8b8b;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    transition: all 0.2s;
+}
+
+.input-btn input:focus {
+    outline: 2px solid #76ec94;
+    border: none;
+}
+
+.input-btn input::placeholder {
+    font-size: 15px;
+    color: #3f3e3e;
 }
 
 .input-btn button {
-    padding: 12px 30px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "poppins", sans-serif;
     border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    background: #64ff56;
+    color: #fefefe;
 }
 
-.input-btn button:hover {
-    background-color: #45a049;
-}
-
-@media (max-width: 768px) {
+@media (max-width:768px) {
     .about {
-        margin: 40px auto;
-        gap: 30px;
-    }
-
-    .about-text h1 {
-        font-size: 28px;
-    }
-
-    .about-text p {
-        font-size: 16px;
-    }
-
-    .about-text span {
-        font-size: 14px;
-    }
-
-    .feedback {
-        padding: 30px 20px;
-    }
-
-    .feedback h1 {
-        font-size: 24px;
-    }
-
-    .input-btn {
+        width: 100vw;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        background-image: url("../../greencart_assets/bottom_banner_image_sm.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
         flex-direction: column;
-    }
-
-    .input-btn button {
-        width: 100%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .about {
-        margin: 40px auto;
-        gap: 30px;
+        height: 1000px;
     }
 
     .about-text {
-        top: 5%;
-        right: 8%;
+        width: 90%;
+        margin: 30px auto;
+        justify-items: start;
     }
 
     .about-text h1 {
-        font-size: 28px;
+        font-size: 25px;
+        font-weight: 600;
+        font-family: "poppins", sans-serif;
     }
 
     .about-text p {
-        font-size: 16px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 8px;
+        font-family: "outfit", sans-serif;
     }
 
-    .about-text span {
-        font-size: 14px;
+    .about-text p span {
+        font-size: 15px;
+        font-weight: 500;
+        color: #666565;
     }
 
     .feedback {
-        padding: 30px 20px;
-    }
-
-    .feedback h1 {
-        font-size: 24px;
-    }
-
-    .feedback p{
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .input-btn {
+        width: 90%;
+        margin: 80px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
 
+    .feedback h1 {
+        font-size: 30px;
+        font-weight: 700;
+        font-family: 'poppins', sans-serif;
+    }
+
+    .feedback p {
+        text-align: center;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: "outfit", sans-serif;
+    }
+
+    .feedback .input-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 30px;
+        gap: 10px;
+    }
+
+    .input-btn input {
+        height: 40px;
+        width: 300px;
+        padding-left: 20px;
+        font-size: 16px;
+        outline: 1px solid #8b8b8b;
+        border: none;
+        border-radius: 5px;
+        background: transparent;
+        transition: all 0.2s;
+    }
+
+    .input-btn input:focus {
+        outline: 2px solid #76ec94;
+        border: none;
+    }
+
+    .input-btn input::placeholder {
+        font-size: 15px;
+        color: #3f3e3e;
+    }
+
     .input-btn button {
-        width: 100%;
+        padding: 10px 30px;
+        font-size: 15px;
+        font-weight: 500;
+        font-family: "poppins", sans-serif;
+        border: none;
+        border-radius: 50px;
+        background: #64ff56;
+        color: #fefefe;
     }
 }

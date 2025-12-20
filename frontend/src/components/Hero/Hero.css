@@ -1,30 +1,30 @@
-.hero-section{
+.hero-section {
     width: 100%;
     height: 600px;
     position: relative;
     box-shadow: 0 0 10px 1px #fcfcfc;
 }
 
-.hero-section img{
+.hero-section img {
     width: 100%;
     height: 100%;
 }
 
-.hero-section-text{
+.hero-section-text {
     position: absolute;
     top: 25%;
     left: 10%;
     width: 40%;
 }
 
-.hero-section-text h1{
+.hero-section-text h1 {
     color: #020247;
     font-size: 55px;
     font-weight: 700;
-    font-family: 'patrick hand',sans-serif;
+    font-family: 'patrick hand', sans-serif;
 }
 
-.hero-section-text button{
+.hero-section-text button {
     padding: 8px 20px;
     font-size: 13px;
     font-weight: 500;
@@ -36,13 +36,32 @@
     margin-top: 10px;
 }
 
-.hero-section p{
+.hero-section p {
     display: inline;
     margin-left: 10px;
     font-size: 14px;
     font-weight: 500;
 }
 
-.hero-section-text p img{
+.hero-section-text p img {
     width: 12px;
+}
+
+@media (max-width:768px) {
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-section-text h1 {
+        font-size: 25px;
+    }
+
+    .hero-section-text button {
+        padding: 8px 15px;
+        font-size: 11px;
+    }
+
+    .hero-section p {
+        font-size: 12px;
+    }
 }
