@@ -42,16 +42,16 @@ const Footer = () => {
             <p>Follow Us</p>
             <ul>
               <li>
-                <i className="fa fa-instagram"></i>Instagram
+                <i className="fab fa-instagram"></i> Instagram
               </li>
               <li>
-                <i className="fa fa-twitter"></i>Twitter
+                <i className="fab fa-twitter"></i>Twitter
               </li>
               <li>
-                <i className="fa fa-facebook"></i>Facebook
+                <i className="fab fa-facebook"></i>Facebook
               </li>
               <li>
-                <i className="fa fa-youtube"></i>You Tube
+                <i className="fab fa-youtube"></i>You Tube
               </li>
             </ul>
           </div>
