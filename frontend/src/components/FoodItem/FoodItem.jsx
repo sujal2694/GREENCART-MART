@@ -55,7 +55,7 @@ const FoodItem = ({
       </div>
       <button onClick={handleAddToCart} className="add-to-cart-btn">
         <img src={assets.cart_icon} alt="cart" />
-        Add
+        ADD
       </button>
     </div>
   );
