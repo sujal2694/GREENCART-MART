@@ -110,6 +110,7 @@
     border-radius: 50px;
     background: #64ff56;
     color: #fefefe;
+    cursor: pointer;
 }
 
 @media (max-width:768px) {

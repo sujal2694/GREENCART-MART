@@ -37,6 +37,7 @@
     transform: translateY(-10px);
     scale: 1.1;
     box-shadow: 0 5px 10px #e0e0e0;
+    outline: 1px solid #38a361;
 }
 
 .box img {
